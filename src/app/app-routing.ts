@@ -30,6 +30,13 @@ export const routes: Routes = [
     component: NewDirectives
   },
   {
+    path: 'life-cycle',
+    loadChildren: () =>
+      import('./lifecycle/life-cycle.module').then(
+        (m) => m.LifeCycleModule
+      ),
+  },
+  {
     path: '**',
     component: MyEmptyPage,
   },

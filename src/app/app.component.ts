@@ -12,6 +12,7 @@ import { MyEmptyPage } from './empty-route/empty-route.component';
 import { CommonModule } from '@angular/common';
 import { MyObjectListRouting } from './object-list/object-list-routing.module';
 import { MyObjectList } from './object-list/components/list/object-list.component';
+import { LifeCycleRouting } from './lifecycle/life-cycle-routing.module';
 
 @Component({
   selector: 'app-root',
@@ -28,6 +29,7 @@ import { MyObjectList } from './object-list/components/list/object-list.componen
     MyEmptyPage,
     MyObjectList,
     MyObjectListRouting,
+    LifeCycleRouting,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
