@@ -44,6 +44,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'pipes',
+    loadChildren: () =>
+      import('./pipes/pipes.module').then(
+        (m) => m.PipesModule
+      ),
+  },
+  {
     path: '**',
     component: MyEmptyPage,
   },
