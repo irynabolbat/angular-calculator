@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { MyCalculatorComponent } from './my-calculator/my-calculator.component';
 import { MyEmptyPage } from './empty-route/empty-route.component';
 import { MyDirectives } from './directives/directives.component';
+import { NewDirectives } from './newDirectives/new-directives.component';
 
 export const routes: Routes = [
   {
@@ -23,6 +24,10 @@ export const routes: Routes = [
   {
     path: 'directives',
     component: MyDirectives,
+  },
+  {
+    path: 'new-directives',
+    component: NewDirectives
   },
   {
     path: '**',
