@@ -1,0 +1,94 @@
+<!-- ngFor -->
+<h1>ngFor</h1>
+<div
+  *ngFor="
+    let color of colors;
+    let i = index;
+    let first = first;
+    let last = last;
+    let count = count
+  "
+>
+  <span>
+    #{{ i }} {{ first ? "It is first el:" : "" }}
+    {{ last ? "It is last el:" : "" }} {{ color }}
+  </span>
+</div>
+
+<!-- ngFor in Angular 17 -->
+<h1>ngFor in Angular 17</h1>
+@for (color of colors; track color; let i = $index; let first = $first; let last
+= $last;) {
+<div>
+  <span>
+    #{{ i }} {{ first ? "It is first el:" : "" }}
+    {{ last ? "It is last el:" : "" }} {{ color }}
+  </span>
+</div>
+} @empty {
+  <span>empty colors</span>
+}
+
+<!-- ngIf -->
+<h1>ngIf</h1>
+<div *ngIf="isShow; else emptyState">
+  <span>I'm here because the value of isShow = true</span>
+</div>
+<button (click)="isShow = !isShow">Change isShow value</button>
+<ng-template #emptyState>
+  <span>isShow = false</span>
+</ng-template>
+
+<!-- ngIf in Angular 17 -->
+<h1>ngIf in Angular 17</h1>
+@if (isShow) {
+  <span>I'm here because the value of isShow = true</span>
+} @else {
+  <span>isShow = false</span>
+}
+<button (click)="isShow = !isShow">Change isShow value</button>
+
+<!-- ngSwitch -->
+<h1>ngSwitch</h1>
+@for (color of colors; track color; let i = $index; let first = $first; let last
+= $last;) {
+<div>
+  <button (click)="currentColor = color">
+    {{ color }}
+  </button>
+</div>
+}
+
+<div [ngSwitch]="currentColor">
+  <span *ngSwitchCase="'red'">current color is red</span>
+  <span *ngSwitchCase="'blue'">current color is blue</span>
+  <span *ngSwitchCase="'green'">current color is green</span>
+  <span *ngSwitchCase="'yellow'">current color is yellow</span>
+</div>
+
+<h1>ngSwitch in Angular 17</h1>
+  @switch (currentColor) {
+    @case ('red') {
+      <span>current color is red</span>
+    }
+    @case ('blue') {
+      <span>current color is blue</span>
+    }
+    @case ('green') {
+      <span>current color is green</span>
+    }
+    @case ('yellow') {
+      <span>current color is yellow</span>
+    }
+    @default {
+      <span>default color is red</span>
+    }
+  }
+
+<!-- ngStyle -->
+<h1>ngStyle</h1>
+<span [ngStyle]="elementStyle">Text is red</span>
+
+<!-- ngClass -->
+<h1>ngClass</h1>
+<span [ngClass]="{ color: 'green' }">Text is green</span>
