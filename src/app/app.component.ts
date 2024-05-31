@@ -16,6 +16,7 @@ import { LifeCycleRouting } from './lifecycle/life-cycle-routing.module';
 import { RequestsRouting } from './requests/request-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { PipesRouting } from './pipes/pipes-routing.module';
+import { FormsRouting } from './forms/forms-routing.module';
 
 @Component({
   selector: 'app-root',
@@ -34,7 +35,8 @@ import { PipesRouting } from './pipes/pipes-routing.module';
     MyObjectListRouting,
     LifeCycleRouting,
     RequestsRouting,
-    PipesRouting
+    PipesRouting,
+    FormsRouting
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
