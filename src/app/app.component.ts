@@ -6,13 +6,15 @@ import {
   RouterOutlet,
 } from '@angular/router';
 import { MyCalculatorComponent } from './my-calculator/my-calculator.component';
-import { MyNavigation } from './navigation/navigation.component';
+import { MyNavigation } from './components/navigation/navigation.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MyEmptyPage } from './empty-route/empty-route.component';
+import { MyEmptyPage } from './components/empty-route/empty-route.component';
 import { CommonModule } from '@angular/common';
 import { MyObjectListRouting } from './object-list/object-list-routing.module';
 import { MyObjectList } from './object-list/components/list/object-list.component';
 import { LifeCycleRouting } from './lifecycle/life-cycle-routing.module';
+import { RequestsRouting } from './requests/request-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -30,6 +32,7 @@ import { LifeCycleRouting } from './lifecycle/life-cycle-routing.module';
     MyObjectList,
     MyObjectListRouting,
     LifeCycleRouting,
+    RequestsRouting,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],

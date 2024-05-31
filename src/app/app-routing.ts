@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { MyCalculatorComponent } from './my-calculator/my-calculator.component';
-import { MyEmptyPage } from './empty-route/empty-route.component';
+import { MyEmptyPage } from './components/empty-route/empty-route.component';
 import { MyDirectives } from './directives/directives.component';
 import { NewDirectives } from './newDirectives/new-directives.component';
 
@@ -34,6 +34,13 @@ export const routes: Routes = [
     loadChildren: () =>
       import('./lifecycle/life-cycle.module').then(
         (m) => m.LifeCycleModule
+      ),
+  },
+  {
+    path: 'requests',
+    loadChildren: () =>
+      import('./requests/request-module.module').then(
+        (m) => m.RequestsModule
       ),
   },
   {
